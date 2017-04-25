@@ -39,7 +39,7 @@ module.exports = (env) => {
             new ExtractTextPlugin('site.css'),
             new webpack.DllReferencePlugin({
                 context: __dirname,
-                manifest: require('./wwwroot/dist/vendor-manifest.json')
+                manifest: require('./wwwroot/vendor-manifest.json')
             })
         ].concat(isDevBuild ? [
             // Plugins that apply in development builds only
@@ -60,7 +60,7 @@ module.exports = (env) => {
         plugins: [
             new webpack.DllReferencePlugin({
                 context: __dirname,
-                manifest: require('./ClientApp/dist/vendor-manifest.json'),
+                manifest: require('./ClientApp/vendor-manifest.json'),
                 sourceType: 'commonjs2',
                 name: './vendor'
             })

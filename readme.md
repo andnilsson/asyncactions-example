@@ -1,4 +1,17 @@
 ### exempel med redux-actions
+
+## getting started
+
+```
+$ git clone https://github.com/andnilsson/asyncactions-example.git
+$ npm install
+$ dotnet restore
+$ dotnet run
+```
+HMR med webpack funkar inte av nån anledning. Kör webpack -w i seperat cmd för att komma runt problemet (eller fixa det :)
+
+
+## snabb förklaring
 i [store.ts](https://github.com/andnilsson/asyncactions-example/blob/master/ClientApp/domain/store.ts) finns en async action creator:
 ```
 export function createAsyncAction(TYPE: string, executeAsync: any) {
