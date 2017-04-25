@@ -68,7 +68,7 @@ Den bränner av actions
 + ASYNC_ACTION_FAILED
 
 
-Den kan användas såhär [forecasts.ts](https://github.com/andnilsson/asyncactions-example/blob/master/ClientApp/store/Forecasts.ts):
+Den användas såhär i [forecasts.ts](https://github.com/andnilsson/asyncactions-example/blob/master/ClientApp/store/Forecasts.ts):
 ```
 export const actionCreators = {
     loadForecasts: createAsyncAction(FETCH_FORECASTS, async (index) => {
