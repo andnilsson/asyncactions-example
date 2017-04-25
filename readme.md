@@ -4,14 +4,18 @@
 
 ```
 $ git clone https://github.com/andnilsson/asyncactions-example.git
+$ cd asyncactions-example
 $ npm install
 $ dotnet restore
+$ webpack
 $ dotnet run
 ```
 HMR med webpack funkar inte av nån anledning. Kör webpack -w i seperat cmd för att komma runt problemet (eller fixa det :)
 
-
 ## snabb förklaring
+Grunden till exemplet är från [MSDN](https://blogs.msdn.microsoft.com/webdev/2017/02/14/building-single-page-applications-on-asp-net-core-with-javascriptservices/)
+
+
 i [store.ts](https://github.com/andnilsson/asyncactions-example/blob/master/ClientApp/domain/store.ts) finns en async action creator:
 ```
 export function createAsyncAction(TYPE: string, executeAsync: any) {
